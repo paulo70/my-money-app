@@ -34,3 +34,9 @@ export function create(values){
   }
 }
 
+export function showUpdate(billingCycles){
+    return [
+      showTabs('tabUpdate'),
+      selectTab('tabUpdate')
+    ]
+}
