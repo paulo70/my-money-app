@@ -8,7 +8,7 @@ import { init } from './billingCycleAction'
 class BillingCycleForm extends Component {
 
   render(){
-    const { handleSubmit } = this.props
+    const { handleSubmit, readOnly } = this.props
     return (
       <form role='form' onSubmit={ handleSubmit }>
         <div className='box-body'>
@@ -16,16 +16,21 @@ class BillingCycleForm extends Component {
           label='name'
           cols='12 4'
           placeholder='enter the name'
+          readOnly={readOnly}
           />
+
          <Field name='month' component={Input}
           label='month'
           cols='12 4'
           placeholder='enter the month'
+          readOnly={readOnly}
          />
+
          <Field name='year'  component={Input}
           label='year'
           cols='12 4'
           placeholder='enter the year'
+          readOnly={readOnly}
          />
         </div>
         <div className='box-footer'>
