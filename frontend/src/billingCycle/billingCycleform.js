@@ -14,34 +14,14 @@ class BillingCycleForm extends Component {
     return (
       <form role='form' onSubmit={ handleSubmit }>
         <div className='box-body'>
-         <Field name='name'  component={Input}
-          label='name'
-          cols='12 4'
-          placeholder='enter the name'
-          readOnly={readOnly}
-          />
-
-         <Field name='month' component={Input}
-          label='month'
-          cols='12 4'
-          placeholder='enter the month'
-          readOnly={readOnly}
-         />
-
-         <Field name='year'  component={Input}
-          label='year'
-          cols='12 4'
-          placeholder='enter the year'
-          readOnly={readOnly}
-         />
-
-         <ItemList
-            cols='12 6'
-            list={credits}
-            readOnly={readOnly}
-            field='debts'
-            legend='Créditos'
-          />
+          <Field name='name' component={Input} readOnly={readOnly}
+              label='Nome' cols='12 4' placeholder='Informe o nome' />
+          <Field name='month' component={Input} type='number' readOnly={readOnly}
+              label='Mês' cols='12 4' placeholder='Informe o mês' />
+          <Field name='year' component={Input} type='number' readOnly={readOnly}
+              label='Ano' cols='12 4' placeholder='Informe o ano' />
+          <ItemList cols='12 6' list={credits} readOnly={readOnly}
+              field='credits' legend='Créditos' />
         </div>
         <div className='box-footer'>
           <button type='submit' className={`btn btn-${this.props.submitClass}`}>
