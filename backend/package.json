@@ -22,7 +22,7 @@
     "pm2": "^2.1.5"
   },
   "devDependencies": {
-    "jsonwebtoken": "^7.3.0",
+    "jsonwebtoken": "^9.0.0",
     "nodemon": "^1.11.0"
   }
 }
